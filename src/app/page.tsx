@@ -1,6 +1,14 @@
 import styles from "./page.module.css";
 import users from "@/app/users.json"
 import User from "./user";
+// import PureClientComp from "./pure-client-component";
+
+import dynamic from "next/dynamic";
+
+const PureClientComp = dynamic(
+	() => import('@/app/pure-client-component'),
+	{ ssr: !!false }
+);
 
 const getAllUsers = async (): Promise<typeof users> => {
 	return new Promise((resolve) => {
@@ -14,6 +22,7 @@ export default async function Home() {
 
 	return (
 		<div className={styles.page}>
+			<PureClientComp />
 			<main className={styles.main}>
 				<h1 className="header">Users</h1>
 				<ul>
