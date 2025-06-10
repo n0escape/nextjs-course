@@ -15,7 +15,7 @@ export default async function Home() {
 	return (
 		<div className={styles.page}>
 			<main className={styles.main}>
-				<h1>Users</h1>
+				<h1 className="header">Users</h1>
 				<ul>
 					{users.map((user) =>
 						<li key={user.username}> 
