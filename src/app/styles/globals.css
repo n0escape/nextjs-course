@@ -1,0 +1,7 @@
+@import url("./normalise.css");
+@import url("./variables.css");
+
+body {
+    background-color: var(--bg-color, #333);
+    color: var(--txt-color-main, lightgray);
+}
