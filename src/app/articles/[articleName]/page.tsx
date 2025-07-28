@@ -1,3 +1,4 @@
+import { getArticleByName } from '@/app/(server)/api';
 import {FC} from 'react'
 
 // type ArticlePageProps = {
@@ -5,15 +6,16 @@ import {FC} from 'react'
 //         articleName: string
 //     }
 // }
-const ArticlePage = ({params}: Params) => {
+const ArticlePage = async ({params}: Params) => {
     const {articleName} = params;
+    const article = await getArticleByName(articleName);
 
     return (
         <>
-            This is article 
-            <p>
-                {articleName}
-            </p>
+            <h1>{article.header}</h1>
+            {article.text.map((line, index)=>(
+                <p key={index}>{line}</p>
+            ))}
         </>
     )
 };
