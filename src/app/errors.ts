@@ -1,0 +1,4 @@
+export const ERRORS = {
+    NOT_FOUND: 'NOT_FOUND',
+    SERVER_ERROR: 'SERVER_ERROR'
+}
