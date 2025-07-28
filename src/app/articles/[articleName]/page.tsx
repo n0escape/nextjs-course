@@ -1,11 +1,11 @@
 import {FC} from 'react'
 
-type ArticlePageProps = {
-    params: {
-        articleName: string
-    }
-}
-const ArticlePage: FC<ArticlePageProps> = ({params}) => {
+// type ArticlePageProps = {
+//     params: {
+//         articleName: string
+//     }
+// }
+const ArticlePage = ({params}: Params) => {
     const {articleName} = params;
 
     return (

@@ -1,3 +1,7 @@
+export const metadata = {
+	
+}
+
 export default function Home() {
-	return <main></main>;
+	return <main>Hello world</main>;
 }
